@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanu Memory Gallery ❤️</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fff;
+}
+
+.header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.header h1{
+    font-size:50px;
+    color:#ff4f9a;
+}
+
+.header p{
+    font-size:20px;
+    color:#666;
+    margin-top:10px;
+}
+
+/* Masonry Gallery */
+.gallery{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    column-count:4;
+    column-gap:15px;
+    padding-bottom:50px;
+}
+
+.gallery img{
+    width:100%;
+    margin-bottom:15px;
+    border-radius:18px;
+    display:block;
+    break-inside:avoid;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* Mobile Responsive */
+@media(max-width:992px){
+    .gallery{
+        column-count:3;
+    }
+}
+
+@media(max-width:768px){
+    .gallery{
+        column-count:2;
+    }
+
+    .header h1{
+        font-size:35px;
+    }
+}
+
+@media(max-width:480px){
+    .gallery{
+        column-count:1;
+    }
+
+    .header h1{
+        font-size:28px;
+    }
+}
+
+/* Popup */
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.popup img{
+    max-width:90%;
+    max-height:90vh;
+    border-radius:15px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>❤️ Memories ❤️</h1>
+    <p>Beautiful Childhood Memories ✨</p>
+</div>
+<section class="film-slider">
+
+    <div class="film-track">
+
+     
+
+        <!-- Duplicate for seamless loop -->
+
+        <div class="film-frame">
+            <img src="img/slider/1.jpeg" alt="">
+        </div>
+
+        <div class="film-frame">
+            <img src="img/slider/2.jpeg" alt="">
+        </div>
+
+        <div class="film-frame">
+            <img src="img/slider/3.jpeg" alt="" style="width: 100%;">
+        </div>
+
+        <div class="film-frame">
+            <img src="img/slider/4.jpeg" alt="">
+        </div> 
+        <div class="film-frame">
+            <img src="img/slider/5.jpeg" alt="">
+        </div>
+         <div class="film-frame">
+            <img src="img/slider/6.jpeg" alt="">
+        </div>
+        <div class="film-frame">
+            <img src="img/slider/7.jpeg" alt="">
+        </div>
+        <div class="film-frame">
+            <img src="img/slider/8.jpeg" alt="">
+        </div>
+        <div class="film-frame">
+            <img src="img/slider/9.jpeg" alt="">
+        </div>
+        
+
+    </div>
+
+</section>
+
+<!-- <section class="gallery">
+
+    <img src="images/img1.jpg" onclick="openImg(this.src)">
+    <img src="images/img2.jpg" onclick="openImg(this.src)">
+    <img src="images/img3.jpg" onclick="openImg(this.src)">
+    <img src="images/img4.jpg" onclick="openImg(this.src)">
+    <img src="images/img5.jpg" onclick="openImg(this.src)">
+    <img src="images/img6.jpg" onclick="openImg(this.src)">
+    <img src="images/img7.jpg" onclick="openImg(this.src)">
+    <img src="images/img8.jpg" onclick="openImg(this.src)">
+    <img src="images/img9.jpg" onclick="openImg(this.src)">
+    <img src="images/img10.jpg" onclick="openImg(this.src)">
+
+   
+
+</section> -->
+<div class="next-btn-container">
+    <a href="happybirthday.html" class="next-btn">
+        🎁 Next Surprise →
+    </a>
+</div>
+<div class="popup" id="popup">
+    <span class="close" onclick="closeImg()">×</span>
+    <img id="popupImg">
+</div>
+<div class="hearts">
+
+<span class="heart" style="left:5%;animation-delay:0s;">❤</span>
+<span class="heart" style="left:20%;animation-delay:2s;">❤</span>
+<span class="heart" style="left:40%;animation-delay:4s;">❤</span>
+<span class="heart" style="left:65%;animation-delay:1s;">❤</span>
+<span class="heart" style="left:85%;animation-delay:3s;">❤</span>
+
+</div>
+
+<script>
+function openImg(src){
+    document.getElementById("popup").style.display="flex";
+    document.getElementById("popupImg").src=src;
+}
+
+function closeImg(){
+    document.getElementById("popup").style.display="none";
+}
+document.getElementById("nextBtn").style.display = "inline-block";
+</script>
+
+</body>
+</html>

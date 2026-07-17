@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Tanu</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Baloo 2',cursive;
+   /* background: linear-gradient(135deg, #a8595f, #ebbfa0, #ff3f91); */
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Floating Elements */
+.floating{
+    position:fixed;
+    font-size:24px;
+    animation:float 12s linear infinite;
+    opacity:.7;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(110vh);
+    }
+    to{
+        transform:translateY(-150px);
+    }
+}
+
+/* Main Content */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+    text-align:center;
+}
+
+.title{
+    font-size:60px;
+    /* color:#fff; */
+    color:#ff5ea8;
+    margin-bottom:50px;
+    /* text-shadow:2px 2px 0 #fff; */
+}
+
+.card{
+    display:none;
+    background:#fff;
+    padding:28px;
+    border-radius:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    font-size:32px;
+    color:#333;
+}
+
+.card.active{
+    display:block;
+}
+
+/* .card{
+    background:#fff;
+    padding:28px;
+    border-radius:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    font-size:32px;
+    color:#333;
+} */
+
+.card span{
+    font-size:34px;
+}
+
+.btn{
+    background: #ff3f91 !important;
+    border:none;
+    color:#fff;
+    padding:18px 50px;
+    border-radius:50px;
+    font-size:28px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(255,94,168,.3);
+}
+
+.btn:hover{
+   transform: translateY(-5px);
+    background: #ff1978;
+}
+
+
+.reason{
+    margin-top:20px;
+    color:#000  ;
+    font-size:24px !important;
+}
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    width:90%;
+    max-width:500px;
+    text-align:center;
+}
+
+.popup-box h2{
+    color:#ff5ea8;
+    margin-bottom:15px;
+}
+
+.close{
+    margin-top:20px;
+    background:#ff5ea8;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.title{
+    font-size:36px;
+}
+
+.card{
+    font-size:20px;
+}
+
+.btn{
+    font-size:20px;
+    padding:15px 35px;
+}
+
+.reason{
+    font-size:18px;
+}
+/* 
+.card{
+    display:none;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    font-size:28px;
+}
+
+.card.active{
+    display:block;
+} */
+
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+    <h1 class="title">
+        🎂 Happy Birthday Tanu 💖
+    </h1>
+
+    <!-- Birthday Image -->
+    <img src="img/tanu.jpeg" alt="Tanu" class="birthday-img">
+
+    <div class="card active">
+        😂 Happy Birthday to the world's most adorable troublemaker! Thanks for filling every day with laughter, drama, and unlimited entertainment. ❤️
+    </div>
+
+    <div class="card">
+        🍫 May your day be full of cake, chocolates, gifts, and absolutely NO homework! (At least for today 😜)
+    </div>
+
+    <div class="card">
+        🤭 Even though we fight over silly things, you're still my favourite little sister and my lifetime partner in crime. 💕
+    </div>
+
+    <div class="card">
+        🎁 Keep smiling, keep dreaming, stay the cute little monkey you are... and remember, you'll always have your big sibling beside you. Happy Birthday! 🎂❤️
+    </div>
+
+    <button class="btn" id="nextBtn">
+        💌 Read Next Wish
+    </button>
+
+    <div class="reason" id="counter">
+        Wish 1 of 4 💖
+    </div>
+
+</div>
+
+
+
+<div class="container">
+
+<a href="memories.html" class="next-btn">
+    📸 Let's See Your Funny Memories →
+</a>
+
+</div>
+
+<!-- <div class="container">
+
+    <h1 class="title">
+        Happy Birthday Tanu 💖
+    </h1>
+
+    <div class="card">
+        🌟 You're such a kind and wonderful person, and I feel lucky to share such a good bond with you. ❤️
+    </div>
+
+    <div class="card">
+        💗 May your day be filled with love, laughter, and endless joy. 🌸
+    </div>
+
+    <div class="card">
+        ❤️ Wishing you success, happiness, and everything your heart desires. ✨
+    </div>
+
+    <button class="btn" onclick="showPopup()">
+        Click Here... 💞
+    </button>
+
+    <div class="reason">
+        Reason 3 of 4
+    </div>
+
+</div> -->
+
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <h2>🎂 Happy Birthday Tanu 🎉</h2>
+
+        <p>
+            May every moment of your life be filled with happiness,
+            success, love and beautiful memories.
+        </p>
+
+        <button class="close" onclick="hidePopup()">
+            Close
+        </button>
+    </div>
+</div>
+
+<div class="hearts">
+
+<span class="heart" style="left:5%;animation-delay:0s;">❤</span>
+<span class="heart" style="left:20%;animation-delay:2s;">❤</span>
+<span class="heart" style="left:40%;animation-delay:4s;">❤</span>
+<span class="heart" style="left:65%;animation-delay:1s;">❤</span>
+<span class="heart" style="left:85%;animation-delay:3s;">❤</span>
+
+</div>
+<script>
+const cards = document.querySelectorAll(".card");
+const btn = document.getElementById("nextBtn");
+const surpriseBtn = document.getElementById("surpriseBtn");
+const counter = document.getElementById("counter");
+
+cards.forEach((card,index)=>{
+    if(index!==0){
+        card.style.display="none";
+    }
+});
+
+let current = 1;
+
+btn.addEventListener("click",()=>{
+
+    if(current < cards.length){
+
+        cards[current].style.display="block";
+
+        counter.innerHTML=`Wish ${current+1} of ${cards.length} 💖`;
+
+        current++;
+
+        if(current===cards.length){
+
+            btn.style.display="none";
+            surpriseBtn.style.display="inline-block";
+
+        }
+
+    }
+
+});
+
+surpriseBtn.addEventListener("click",()=>{
+
+    document.getElementById("popup").style.display="flex";
+
+});
+
+function hidePopup(){
+
+    document.getElementById("popup").style.display="none";
+
+}
+</script>
+
+</body>
+</html>

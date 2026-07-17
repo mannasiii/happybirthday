@@ -1,0 +1,343 @@
+a {
+    text-decoration: none;
+    color: #fff !important;
+}
+.film-slider{
+
+    width:100%;
+    overflow:hidden;
+    /* padding:60px 0; */
+    /* background:#fff; */
+}
+
+.film-track{
+
+    display:flex;
+    /* width:max-content; */
+
+    animation:movie 18s linear infinite;
+}
+
+.film-frame{
+
+    position:relative;
+
+    width:500px;
+    height:100%;
+
+    margin-right:20px;
+
+
+
+    overflow:hidden;
+}
+
+/* Film Holes */
+
+.film-frame::before,
+.film-frame::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    width:100%;
+    height:14px;
+
+    background:
+    repeating-linear-gradient(
+        to right,
+        transparent 0px,
+        transparent 10px,
+        #fff 10px,
+        #fff 20px
+    );
+}
+
+.film-frame::before{
+    top:-18px;
+}
+
+.film-frame::after{
+    bottom:-18px;
+}
+
+.film-frame img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.film-frame:hover img{
+
+    transform:scale(1.08);
+
+}
+
+@keyframes movie{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+/* extra */
+.film-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 0;
+    background: #fff;
+    position: relative;
+}
+
+.film-track {
+    display: flex;
+    width: max-content;
+    animation: movieSlide 18s linear infinite;
+    will-change: transform;
+}
+
+/* Pause on desktop hover */
+.film-slider:hover .film-track {
+    animation-play-state: paused;
+}
+
+.film-frame {
+    position: relative;
+    width: 260px;
+    /* height: 170px; */
+    margin-right: 20px;
+    overflow: hidden;
+
+    background: #fff;
+    border-top: 18px solid #fff;
+    border-bottom: 18px solid #fff;
+
+    transition: .4s ease;
+}
+
+/* Film holes */
+.film-frame::before,
+.film-frame::after{
+    content:"";
+    position:absolute;
+    left:0;
+    width:100%;
+    height:14px;
+
+    background:
+    repeating-linear-gradient(
+        to right,
+        transparent 0 10px,
+        #fff 10px 20px
+    );
+
+    z-index:5;
+}
+
+.film-frame::before{
+    top:-18px;
+}
+
+.film-frame::after{
+    bottom:-18px;
+}
+
+.film-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition: transform .6s ease;
+}
+
+/* Zoom image when hovered */
+.film-frame:hover img{
+    transform:scale(1.08);
+}
+
+/* Nice shadow */
+.film-frame{
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+@keyframes movieSlide{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(calc(-50% - 10px));
+    }
+
+}
+
+.next-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.next-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    min-width: 220px;
+
+    padding: 16px 35px;
+
+    background: linear-gradient(135deg,#ff4f9a,#ff7b54);
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    border-radius: 50px;
+
+    box-shadow: 0 12px 25px rgba(255,79,154,.35);
+
+    transition: all .3s ease;
+}
+
+.next-btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(255,79,154,.45);
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+    .next-btn{
+        width: 100%;
+        max-width: 320px;
+
+        font-size: 20px;
+        padding: 15px 25px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+    .next-btn-container{
+        margin: 40px 15px;
+    }
+
+    .next-btn{
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 18px;
+        padding: 14px 20px;
+        border-radius: 40px;
+    }
+
+}   
+
+
+
+.hearts{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+left:0;
+
+top:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.heart{
+
+position:absolute;
+
+color:#ff6ab7;
+
+font-size:25px;
+
+animation:heart 8s linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes heart{
+
+0%{
+
+transform:translateY(100vh);
+
+opacity:0;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-150px);
+
+opacity:0;
+
+}
+
+}
+
+/* msg */
+.birthday-img{
+
+    display:block;
+
+    width:300px;
+    height:330px;
+
+    object-fit:cover;
+
+    margin:0 auto 35px;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 0 0 8px #ff8fb8,
+    0 20px 45px rgba(255,94,168,.35);
+
+    transition:.4s;
+
+}
+
+.birthday-img:hover{
+
+    transform:scale(1.05) rotate(-3deg);
+
+}
+
+/*  */

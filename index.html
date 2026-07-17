@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Happy Birthday</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="style.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+/* background:linear-gradient(135deg,#2d004d,#4b006e,#120018); */
+/* background: linear-gradient(135deg, #a8595f, #ebbfa0, #ff3f91); */
+overflow-x:hidden;
+
+min-height:100vh;
+
+}
+
+/*========================*/
+
+.blow-section{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/*========================*/
+
+.bg-circle{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(90px);
+
+opacity:.25;
+
+animation:float 8s ease-in-out infinite;
+
+}
+
+.one{
+
+width:350px;
+
+height:350px;
+
+background:#ff66b3;
+
+top:-120px;
+
+left:-100px;
+
+}
+
+.two{
+
+width:280px;
+
+height:280px;
+
+background:#ffb347;
+
+bottom:-80px;
+
+right:-50px;
+
+animation-delay:2s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(30px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*========================*/
+
+.glass{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:25px;
+
+padding:60px;
+
+overflow:hidden;
+
+}
+
+/*========================*/
+
+#title{
+
+font-size:70px;
+
+font-weight:800;
+
+color:#000;
+
+opacity:0;
+
+transform:translateX(-600px);
+
+}
+
+#title span{
+
+color:#ff8ec8;
+
+}
+
+/*========================*/
+
+#subtitle{
+
+font-size:20px;
+
+/* color:#fff; */
+
+margin-top:20px;
+
+opacity:0;
+
+}
+
+/*========================*/
+
+#wishBtn{
+
+margin-top:25px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff3f91;
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.4s;
+
+opacity:0;
+
+}
+
+#wishBtn:hover{
+
+transform:translateY(-5px);
+
+background:#ff1978;
+
+}
+
+/*========================*/
+
+.scene{
+
+position:relative;
+
+height:380px;
+
+margin-top:50px;
+
+}
+
+/*========================*/
+.trs{
+    transform:translateX(0px) !important;
+}
+.cake{
+
+position:absolute;
+
+    bottom: -30px;
+
+/* left:50%; */
+left: -7%;
+
+width:260px;
+
+/* transform:translateX(600px) !important; */
+
+transition:2s;
+
+z-index:2;
+
+}
+
+/*========================*/
+
+.girl{
+
+position:absolute;
+
+bottom:0;
+
+right:-450px;
+
+width:330px;
+
+transition:2s;
+
+z-index:5;
+
+}
+
+/*========================*/
+
+.candle{
+
+position:absolute;
+
+left:50%;
+
+bottom:265px;
+
+margin-left:-4px;
+
+z-index:10;
+display: none;
+
+}
+
+.stick{
+
+width:8px;
+
+height:35px;
+
+background:white;
+
+border-radius:10px;
+
+}
+
+.flame{
+
+width:18px;
+
+height:28px;
+
+background:orange;
+
+border-radius:50%;
+
+margin-left:-5px;
+
+margin-bottom:-3px;
+
+animation:flicker .15s infinite;
+
+box-shadow:0 0 20px orange;
+
+}
+
+@keyframes flicker{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(.85);
+
+}
+
+100%{
+
+transform:scale(1.1);
+
+}
+
+}
+
+/*========================*/
+
+.smoke{
+
+position:absolute;
+
+width:15px;
+
+height:15px;
+
+background:#d5d5d5;
+
+border-radius:50%;
+
+opacity:0;
+
+top:-5px;
+
+left:-2px;
+
+}
+
+/*========================*/
+
+.hearts{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+left:0;
+
+top:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.heart{
+
+position:absolute;
+
+color:#ff6ab7;
+
+font-size:25px;
+
+animation:heart 8s linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes heart{
+
+0%{
+
+transform:translateY(100vh);
+
+opacity:0;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-150px);
+
+opacity:0;
+
+}
+
+}
+
+/*========================*/
+
+@media(max-width:991px){
+
+#title{
+
+font-size:45px;
+
+}
+
+.scene{
+
+height:320px;
+
+}
+
+.cake{
+
+width:180px;
+
+}
+
+.girl{
+
+width:220px;
+
+}
+
+.candle{
+
+bottom:190px;
+
+}
+
+
+
+
+}
+
+@media(max-width:576px){
+
+.glass{
+
+padding:30px 20px;
+
+}
+
+#title{
+
+font-size:34px;
+
+}
+
+#subtitle{
+
+font-size:16px;
+
+}
+
+.scene{
+
+height:210px;
+
+}
+
+.cake{
+
+width:140px;
+
+}
+
+.girl{
+
+width:170px;
+
+        /* right: 2px !important; */
+        right: -24px !important;
+
+}
+
+.candle{
+
+bottom:145px;
+
+}
+
+}
+/*========================*/
+
+.confetti{
+
+position:fixed;
+
+width:12px;
+
+height:12px;
+
+border-radius:3px;
+
+pointer-events:none;
+
+z-index:9999;
+
+}
+
+.walk{
+
+animation:walk .4s infinite;
+
+}
+
+@keyframes walk{
+
+0%{
+
+transform:
+translateY(0px)
+rotate(1deg);
+
+}
+
+50%{
+
+transform:
+translateY(-6px)
+rotate(-1deg);
+
+}
+
+100%{
+
+transform:
+translateY(0px)
+rotate(1deg);
+
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="bg-circle one"></div>
+<div class="bg-circle two"></div>
+
+<section class="blow-section">
+
+<div class="container">
+
+<div class="glass text-center">
+
+<h1 id="title">
+Blow Your <span>Candle</span>
+</h1>
+
+<p id="subtitle">
+Close your eyes, make a wish and blow the candle.
+</p>
+
+<button id="wishBtn" >
+<a href="blessings.html">    ❤️ Make A Wish</a> 
+</button>
+
+<div class="scene">
+
+<img src="img/cake.png" class="cake " id="cake" >
+
+<img src="img/girl.png" class="girl" id="girl">
+
+<div class="candle">
+
+<div class="flame" id="flame"></div>
+
+<div class="stick"></div>
+
+<div class="smoke" id="smoke"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hearts">
+
+<span class="heart" style="left:5%;animation-delay:0s;">❤</span>
+<span class="heart" style="left:20%;animation-delay:2s;">❤</span>
+<span class="heart" style="left:40%;animation-delay:4s;">❤</span>
+<span class="heart" style="left:65%;animation-delay:1s;">❤</span>
+<span class="heart" style="left:85%;animation-delay:3s;">❤</span>
+
+</div>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript will come in Part 2 -->
+<script>
+
+    // ================================
+    // Get Elements
+    // ================================
+
+    const title = document.getElementById("title");
+    const subtitle = document.getElementById("subtitle");
+    const wishBtn = document.getElementById("wishBtn");
+
+    const cake = document.getElementById("cake");
+    const girl = document.getElementById("girl");
+
+    const flame = document.getElementById("flame");
+    const smoke = document.getElementById("smoke");
+
+
+    // Girl final position
+
+    const girlStop = "180px";
+
+
+    // ================================
+    // Start Animation
+    // ================================
+
+    window.onload = startAnimation;
+
+
+    // ================================
+
+    function startAnimation() {
+
+        resetScene();
+
+
+        // Title
+
+        setTimeout(() => {
+
+            title.style.opacity = "1";
+            title.style.transform = "translateX(0)";
+
+        }, 500);
+
+
+        // Subtitle
+
+        setTimeout(() => {
+
+            subtitle.style.opacity = "1";
+
+        }, 1800);
+
+
+        // Button
+
+        setTimeout(() => {
+
+            wishBtn.style.opacity = "1";
+
+        }, 2200);
+
+
+        // Cake
+
+        setTimeout(() => {
+
+            cake.style.transform = "translateX(0)";
+
+        }, 3200);
+
+
+        // Girl enters
+
+        setTimeout(() => {
+
+            girl.style.right = girlStop;
+
+        }, 5200);
+
+
+        // Girl bends
+
+        setTimeout(() => {
+
+            girl.style.transform = "rotate(-8deg) translateX(-60px)";
+
+        }, 7600);
+
+
+        // Blow Candle
+
+        setTimeout(() => {
+
+            flame.style.opacity = "0";
+
+            showSmoke();
+
+            launchConfetti();
+
+        }, 9000);
+
+
+        // Girl returns
+
+        setTimeout(() => {
+
+            girl.style.transform = "rotate(0deg) translateX(0px)";
+
+        }, 10200);
+
+    }
+
+
+
+    // ================================
+    // Smoke
+    // ================================
+
+    function showSmoke() {
+
+        smoke.style.opacity = "1";
+
+        smoke.animate([
+
+            {
+                transform: "translateY(0px) scale(.4)",
+                opacity: 1
+            },
+
+            {
+                transform: "translateY(-70px) scale(2)",
+                opacity: 0
+            }
+
+        ], {
+
+            duration: 1800,
+
+            fill: "forwards"
+
+        });
+
+    }
+
+
+
+    // ================================
+    // Reset
+    // ================================
+
+    function resetScene() {
+
+        title.style.opacity = "0";
+        title.style.transform = "translateX(-600px)";
+
+        subtitle.style.opacity = "0";
+
+        wishBtn.style.opacity = "0";
+
+        cake.style.transform = "translateX(600px)";
+
+        girl.style.right = "-450px";
+
+        girl.style.transform = "rotate(0deg)";
+
+        flame.style.opacity = "1";
+
+        smoke.style.opacity = "0";
+
+    }
+
+
+
+    // ================================
+    // Replay Button
+    // ================================
+
+    wishBtn.addEventListener("click", () => {
+
+        startAnimation();
+
+    });
+
+
+
+    // ================================
+    // Confetti
+    // ================================
+
+    function launchConfetti() {
+
+        for (let i = 0; i < 120; i++) {
+
+            let confetti = document.createElement("div");
+
+            confetti.className = "confetti";
+
+            confetti.style.left = (window.innerWidth / 2) + "px";
+
+            confetti.style.top = "180px";
+
+            confetti.style.background = randomColor();
+
+            confetti.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+
+            document.body.appendChild(confetti);
+
+            let x = (Math.random() - 0.5) * 900;
+
+            let y = Math.random() * 700 + 250;
+
+            confetti.animate([
+
+                {
+                    transform: "translate(0,0)",
+                    opacity: 1
+                },
+
+                {
+                    transform: "translate(" + x + "px," + y + "px) rotate(720deg)",
+                    opacity: 0
+                }
+
+            ], {
+
+                duration: 3000,
+
+                easing: "ease-out"
+
+            });
+
+            setTimeout(() => {
+
+                confetti.remove();
+
+            }, 3000);
+
+        }
+
+    }
+
+
+
+    // ================================
+    // Random Color
+    // ================================
+
+    function randomColor() {
+
+        const colors = [
+
+            "#ff3f91",
+            "#ffcc00",
+            "#00d2ff",
+            "#00ff90",
+            "#ff4d4d",
+            "#ffffff",
+            "#ff8ec8"
+
+        ];
+
+        return colors[Math.floor(Math.random() * colors.length)];
+
+    }
+    
+</script>
+</body>
+</html>

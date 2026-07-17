@@ -1,0 +1,386 @@
+/* ===========================
+   Large Laptop (1400px)
+=========================== */
+@media (max-width:1400px) {
+
+    .glass {
+        padding: 50px;
+    }
+
+    #title {
+        font-size: 60px;
+    }
+
+    .scene {
+        height: 500px;
+    }
+
+    .cake {
+        width: 240px;
+        left: 42%;
+    }
+
+    .girl {
+        width: 300px;
+        
+    }
+
+}
+
+
+/* ===========================
+   Laptop (1200px)
+=========================== */
+@media (max-width:1200px) {
+
+    #title {
+        font-size: 52px;
+    }
+
+    #subtitle {
+        font-size: 18px;
+    }
+
+    .scene {
+        height: 470px;
+    }
+
+    .cake {
+        width: 220px;
+        left: 40%;
+    }
+
+    .girl {
+        width: 270px;
+    }
+
+}
+
+
+/* ===========================
+   Tablet Landscape (992px)
+=========================== */
+@media (max-width:992px) {
+
+    .glass {
+        padding: 40px;
+    }
+
+    #title {
+        font-size: 42px;
+    }
+
+    #subtitle {
+        font-size: 17px;
+    }
+
+    .scene {
+        height: 420px;
+    }
+
+    .cake {
+        width: 180px;
+        left: 40%;
+    }
+
+    .girl {
+        width: 220px;
+    }
+
+    #wishBtn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+}
+
+
+/* ===========================
+   Tablet Portrait (768px)
+=========================== */
+@media (max-width:768px) {
+
+    .glass {
+        padding: 35px 25px;
+    }
+
+    #title {
+        font-size: 36px;
+    }
+
+    #subtitle {
+        font-size: 16px;
+    }
+
+    .scene {
+        height: 360px;
+        margin-top: 40px;
+    }
+
+    .cake {
+        width: 150px;
+        left: 38%;
+    }
+
+    .girl {
+        width: 170px;
+    }
+
+    #wishBtn {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+
+}
+
+
+/* ===========================
+   Large Mobile (576px)
+=========================== */
+@media (max-width:576px) {
+
+    .glass {
+        padding: 25px 15px;
+        border-radius: 18px;
+    }
+
+    #title {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    #subtitle {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+
+    #wishBtn {
+        margin-top: 20px;
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    .scene {
+        height: 280px;
+        margin-top: 35px;
+    }
+
+    .cake {
+        width: 120px;
+        left: 36%;
+    }
+
+    .girl {
+        width: 140px;
+    }
+
+    .heart {
+        font-size: 18px;
+    }
+
+}
+
+
+/* ===========================
+   Small Mobile (425px)
+=========================== */
+@media (max-width:425px) {
+
+    #title {
+        font-size: 26px;
+    }
+
+    #subtitle {
+        font-size: 14px;
+    }
+
+    .scene {
+        height: 240px;
+    }
+
+    .cake {
+        width: 100px;
+        left: 35%;
+    }
+
+    .girl {
+        width: 120px;
+    }
+
+    #wishBtn {
+        font-size: 13px;
+        padding: 8px 20px;
+    }
+
+}
+
+
+/* ===========================
+   Extra Small Mobile (375px)
+=========================== */
+@media (max-width:375px) {
+
+    #title {
+        font-size: 23px;
+    }
+
+    #subtitle {
+        font-size: 13px;
+    }
+
+    .scene {
+        height: 210px;
+    }
+
+    .cake {
+        width: 90px;
+        left: 34%;
+    }
+
+    .girl {
+        width: 105px;
+    }
+
+}
+
+
+/* ===========================
+   Very Small Mobile (320px)
+=========================== */
+@media (max-width:320px) {
+
+    .glass {
+        padding: 20px 12px;
+    }
+
+    #title {
+        font-size: 20px;
+    }
+
+    #subtitle {
+        font-size: 12px;
+    }
+
+    #wishBtn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .scene {
+        height: 180px;
+    }
+
+    .cake {
+        width: 75px;
+        left: 33%;
+    }
+
+    .girl {
+        width: 90px;
+    }
+
+}
+
+
+
+/* Tablet */
+
+@media (max-width:991px){
+
+    .film-slider{
+        padding:40px 0;
+    }
+
+    .film-frame{
+
+        width:220px;
+        height:145px;
+
+        margin-right:15px;
+
+        /* border-top:15px solid #fff;
+        border-bottom:15px solid #fff; */
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .film-slider{
+        padding:30px 0;
+    }
+
+    .film-frame{
+
+        width:180px;
+        height:120px;
+
+        margin-right:12px;
+/* 
+        border-top:12px solid #fff;
+        border-bottom:12px solid #fff; */
+    }
+
+    .film-track{
+        animation-duration:14s;
+         width:max-content;
+    }
+
+}
+
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+    .film-frame{
+
+        width:150px;
+        height:200px;
+
+        margin-right:10px;
+
+            /* border-top:10px solid #fff;
+            border-bottom:10px solid #fff; */
+    }
+
+    .film-track{
+        animation-duration:12s;
+         width:max-content;
+    }
+
+}
+
+@media(max-width:768px){
+
+.birthday-img{
+
+    width:240px;
+    height:240px;
+
+}
+
+}
+
+#cake{
+    transform: translateX(600px) !important;
+}
+
+@media (max-width:768px){
+
+    #cake{
+        transform: translateX(0px) !important;
+    }
+
+}
+
+@media (max-width:480px){
+
+    #cake{
+        transform: translateX(0px) !important;
+    }
+
+}
