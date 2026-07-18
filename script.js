@@ -15,3 +15,16 @@ slider.addEventListener("touchcancel", () => {
 
 // 
 
+const tracks = document.querySelectorAll(".film-track");
+
+tracks.forEach(track => {
+
+    track.addEventListener("touchstart", () => {
+        track.style.animationPlayState = "paused";
+    });
+
+    track.addEventListener("touchend", () => {
+        track.style.animationPlayState = "running";
+    });
+
+});
